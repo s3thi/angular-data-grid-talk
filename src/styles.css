@@ -7,9 +7,22 @@ body {
 	height: 15em;
 	width: 15em;
 	overflow: scroll;
-	background-color: indianred;
-	border: solid 3px hotpink;
+	background-color: hotpink;
+	border: solid 3px indianred;
 	color: white;
-	padding: 1em;
+	padding: 0;
 	list-style: none;
+}
+
+.grid li {
+	height: 30px;
+	margin: 0;
+	padding-left: 0.5em;
+
+	display: flex;
+	align-items: center;
+}
+
+.grid li:nth-child(even) {
+	background-color: deeppink;
 }
