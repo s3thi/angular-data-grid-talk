@@ -23,6 +23,6 @@ body {
 	align-items: center;
 }
 
-.grid li:nth-child(even) {
+.grid .even {
 	background-color: deeppink;
 }

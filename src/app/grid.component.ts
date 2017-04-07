@@ -2,14 +2,16 @@ import { Component, Input, ViewChild, ElementRef, ChangeDetectorRef } from '@ang
 import { Observable } from 'rxjs/Rx';
 
 const itemHeightPx = 30;
-const throttleTimeMs = 200;
+const throttleTimeMs = 100;
 
 @Component({
   selector: 'grid',
   template: `
   	<ul #gridContainer class="grid">
 		<div #topBookend></div>
-		<li *ngFor="let item of visibleItems">{{ item.label }}</li>
+		<li *ngFor="let item of visibleItems" [ngClass]="{'even': item.index % 2 === 0}">
+			{{ item.label }}
+		</li>
 		<div #bottomBookend></div>
   	</ul>
   `,

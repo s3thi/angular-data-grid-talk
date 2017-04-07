@@ -8,6 +8,6 @@ export class AppComponent  {
 	items: Array<any>;
 	
 	constructor() {
-		this.items = new Array(10000).fill(0).map((_, i) => ({ label: `Item ${i+1}` }));
+		this.items = new Array(10000).fill(0).map((_, i) => ({ label: `Item ${i+1}`, index: i + 1 }));
 	}
 }
