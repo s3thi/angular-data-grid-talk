@@ -1,0 +1,15 @@
+body {
+	font-size: 16px;
+	line-height: 1.45;
+}
+
+.grid {
+	height: 15em;
+	width: 15em;
+	overflow: scroll;
+	background-color: indianred;
+	border: solid 3px hotpink;
+	color: white;
+	padding: 1em;
+	list-style: none;
+}

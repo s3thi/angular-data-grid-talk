@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'grid',
   template: `
-  	<ul>
+  	<ul class="grid">
   		<li *ngFor="let item of items">{{ item.label }}</li>
   	</ul>
   `,
 })
-export class GridComponent  { }
+export class GridComponent  {
+	@Input() items: any;
+}

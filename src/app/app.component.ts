@@ -2,6 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+  template: `<grid [items]="items"></grid>`,
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  {
+	items: Array<any>;
+	
+	constructor() {
+		this.items = new Array(10000).fill(0).map((_, i) => ({ label: `Item ${i}` }));
+	}
+}
